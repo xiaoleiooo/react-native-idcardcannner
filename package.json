@@ -1,0 +1,29 @@
+{
+  "name": "react-native-idcardcannner",
+  "version": "0.0.1",
+  "description": "idcard scanner、IDcard orc、",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/xiaoleiooo/react-native-idcardcannner.git"
+  },
+  "keywords": [
+    "react-native",
+    "ocr",
+    "RN",
+    "ocr",
+    "react-native",
+    "idcard",
+    "ocr",
+    "scanner"
+  ],
+  "author": "xiaoleiooo",
+  "license": "MIT",
+  "bugs": {
+    "url": "https://github.com/xiaoleiooo/react-native-idcardcannner/issues"
+  },
+  "homepage": "https://github.com/xiaoleiooo/react-native-idcardcannner#readme"
+}

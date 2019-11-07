@@ -1,0 +1,479 @@
+// !$*UTF8*$!
+{
+	archiveVersion = 1;
+	classes = {
+	};
+	objectVersion = 48;
+	objects = {
+
+/* Begin PBXBuildFile section */
+		B7599FC82374266C00C4B542 /* UIColor+Hex.m in Sources */ = {isa = PBXBuildFile; fileRef = B7599FC72374266C00C4B542 /* UIColor+Hex.m */; };
+		B7A7A9DB236A7E8C00389397 /* RCTIDcardScanner.m in Sources */ = {isa = PBXBuildFile; fileRef = B7A7A9DA236A7E8C00389397 /* RCTIDcardScanner.m */; };
+		B7A7AA3C236A999000389397 /* RCTIDCardScannerManager.m in Sources */ = {isa = PBXBuildFile; fileRef = B7A7AA3B236A999000389397 /* RCTIDCardScannerManager.m */; };
+		B7A7AA40236ABB5B00389397 /* RCTIDcardScanner.h in CopyFiles */ = {isa = PBXBuildFile; fileRef = B7A7A9D9236A7E8C00389397 /* RCTIDcardScanner.h */; };
+		B7A7AA4D236AE2DC00389397 /* IDInfo.m in Sources */ = {isa = PBXBuildFile; fileRef = B7A7AA41236AE2DB00389397 /* IDInfo.m */; };
+		B7A7AA4E236AE2DC00389397 /* RectManager.m in Sources */ = {isa = PBXBuildFile; fileRef = B7A7AA42236AE2DB00389397 /* RectManager.m */; };
+		B7A7AA4F236AE2DC00389397 /* UIImage+Extend.m in Sources */ = {isa = PBXBuildFile; fileRef = B7A7AA43236AE2DB00389397 /* UIImage+Extend.m */; };
+		B7A7AA50236AE2DC00389397 /* libexidcardios.a in Frameworks */ = {isa = PBXBuildFile; fileRef = B7A7AA49236AE2DB00389397 /* libexidcardios.a */; };
+		B7A7AA51236AEFC300389397 /* zocr0.lib in Resources */ = {isa = PBXBuildFile; fileRef = B7A7AA47236AE2DB00389397 /* zocr0.lib */; };
+/* End PBXBuildFile section */
+
+/* Begin PBXContainerItemProxy section */
+		B7A7AA3D236AB62200389397 /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = B7A7A9CE236A7E8C00389397 /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = B7A7AA23236A86A700389397;
+			remoteInfo = RNIDcardScannerReources;
+		};
+/* End PBXContainerItemProxy section */
+
+/* Begin PBXCopyFilesBuildPhase section */
+		B7A7A9D4236A7E8C00389397 /* CopyFiles */ = {
+			isa = PBXCopyFilesBuildPhase;
+			buildActionMask = 2147483647;
+			dstPath = "include/$(PRODUCT_NAME)";
+			dstSubfolderSpec = 16;
+			files = (
+				B7A7AA40236ABB5B00389397 /* RCTIDcardScanner.h in CopyFiles */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXCopyFilesBuildPhase section */
+
+/* Begin PBXFileReference section */
+		B7599FC62374266C00C4B542 /* UIColor+Hex.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "UIColor+Hex.h"; sourceTree = "<group>"; };
+		B7599FC72374266C00C4B542 /* UIColor+Hex.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = "UIColor+Hex.m"; sourceTree = "<group>"; };
+		B7A7A9D6236A7E8C00389397 /* libRNIDcardScanner.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; path = libRNIDcardScanner.a; sourceTree = BUILT_PRODUCTS_DIR; };
+		B7A7A9D9236A7E8C00389397 /* RCTIDcardScanner.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = RCTIDcardScanner.h; sourceTree = "<group>"; };
+		B7A7A9DA236A7E8C00389397 /* RCTIDcardScanner.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = RCTIDcardScanner.m; sourceTree = "<group>"; };
+		B7A7AA24236A86A700389397 /* RNIDcardScannerReources.bundle */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = RNIDcardScannerReources.bundle; sourceTree = BUILT_PRODUCTS_DIR; };
+		B7A7AA26236A86A700389397 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		B7A7AA3A236A999000389397 /* RCTIDCardScannerManager.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = RCTIDCardScannerManager.h; sourceTree = "<group>"; };
+		B7A7AA3B236A999000389397 /* RCTIDCardScannerManager.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = RCTIDCardScannerManager.m; sourceTree = "<group>"; };
+		B7A7AA41236AE2DB00389397 /* IDInfo.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = IDInfo.m; sourceTree = "<group>"; };
+		B7A7AA42236AE2DB00389397 /* RectManager.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = RectManager.m; sourceTree = "<group>"; };
+		B7A7AA43236AE2DB00389397 /* UIImage+Extend.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "UIImage+Extend.m"; sourceTree = "<group>"; };
+		B7A7AA45236AE2DB00389397 /* commondef.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = commondef.h; sourceTree = "<group>"; };
+		B7A7AA47236AE2DB00389397 /* zocr0.lib */ = {isa = PBXFileReference; lastKnownFileType = file; path = zocr0.lib; sourceTree = "<group>"; };
+		B7A7AA48236AE2DB00389397 /* excards.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = excards.h; sourceTree = "<group>"; };
+		B7A7AA49236AE2DB00389397 /* libexidcardios.a */ = {isa = PBXFileReference; lastKnownFileType = archive.ar; path = libexidcardios.a; sourceTree = "<group>"; };
+		B7A7AA4A236AE2DB00389397 /* RectManager.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = RectManager.h; sourceTree = "<group>"; };
+		B7A7AA4B236AE2DB00389397 /* UIImage+Extend.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "UIImage+Extend.h"; sourceTree = "<group>"; };
+		B7A7AA4C236AE2DB00389397 /* IDInfo.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = IDInfo.h; sourceTree = "<group>"; };
+/* End PBXFileReference section */
+
+/* Begin PBXFrameworksBuildPhase section */
+		B7A7A9D3236A7E8C00389397 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				B7A7AA50236AE2DC00389397 /* libexidcardios.a in Frameworks */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		B7A7AA21236A86A700389397 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXFrameworksBuildPhase section */
+
+/* Begin PBXGroup section */
+		B7A7A9CD236A7E8C00389397 = {
+			isa = PBXGroup;
+			children = (
+				B7A7A9D8236A7E8C00389397 /* RNIDcardScanner */,
+				B7A7AA25236A86A700389397 /* RNIDcardScannerReources */,
+				B7A7A9D7236A7E8C00389397 /* Products */,
+			);
+			sourceTree = "<group>";
+		};
+		B7A7A9D7236A7E8C00389397 /* Products */ = {
+			isa = PBXGroup;
+			children = (
+				B7A7A9D6236A7E8C00389397 /* libRNIDcardScanner.a */,
+				B7A7AA24236A86A700389397 /* RNIDcardScannerReources.bundle */,
+			);
+			name = Products;
+			sourceTree = "<group>";
+		};
+		B7A7A9D8236A7E8C00389397 /* RNIDcardScanner */ = {
+			isa = PBXGroup;
+			children = (
+				B7A7AA4C236AE2DB00389397 /* IDInfo.h */,
+				B7A7AA41236AE2DB00389397 /* IDInfo.m */,
+				B7A7AA44236AE2DB00389397 /* libexidcard */,
+				B7A7AA4A236AE2DB00389397 /* RectManager.h */,
+				B7A7AA42236AE2DB00389397 /* RectManager.m */,
+				B7A7AA4B236AE2DB00389397 /* UIImage+Extend.h */,
+				B7A7AA43236AE2DB00389397 /* UIImage+Extend.m */,
+				B7A7A9D9236A7E8C00389397 /* RCTIDcardScanner.h */,
+				B7A7A9DA236A7E8C00389397 /* RCTIDcardScanner.m */,
+				B7A7AA3A236A999000389397 /* RCTIDCardScannerManager.h */,
+				B7A7AA3B236A999000389397 /* RCTIDCardScannerManager.m */,
+				B7599FC62374266C00C4B542 /* UIColor+Hex.h */,
+				B7599FC72374266C00C4B542 /* UIColor+Hex.m */,
+			);
+			path = RNIDcardScanner;
+			sourceTree = "<group>";
+		};
+		B7A7AA25236A86A700389397 /* RNIDcardScannerReources */ = {
+			isa = PBXGroup;
+			children = (
+				B7A7AA26236A86A700389397 /* Info.plist */,
+			);
+			path = RNIDcardScannerReources;
+			sourceTree = "<group>";
+		};
+		B7A7AA44236AE2DB00389397 /* libexidcard */ = {
+			isa = PBXGroup;
+			children = (
+				B7A7AA45236AE2DB00389397 /* commondef.h */,
+				B7A7AA46236AE2DB00389397 /* dicts */,
+				B7A7AA48236AE2DB00389397 /* excards.h */,
+				B7A7AA49236AE2DB00389397 /* libexidcardios.a */,
+			);
+			path = libexidcard;
+			sourceTree = "<group>";
+		};
+		B7A7AA46236AE2DB00389397 /* dicts */ = {
+			isa = PBXGroup;
+			children = (
+				B7A7AA47236AE2DB00389397 /* zocr0.lib */,
+			);
+			path = dicts;
+			sourceTree = "<group>";
+		};
+/* End PBXGroup section */
+
+/* Begin PBXNativeTarget section */
+		B7A7A9D5236A7E8C00389397 /* RNIDcardScanner */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = B7A7A9DF236A7E8C00389397 /* Build configuration list for PBXNativeTarget "RNIDcardScanner" */;
+			buildPhases = (
+				B7A7A9D2236A7E8C00389397 /* Sources */,
+				B7A7A9D3236A7E8C00389397 /* Frameworks */,
+				B7A7A9D4236A7E8C00389397 /* CopyFiles */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+				B7A7AA3E236AB62200389397 /* PBXTargetDependency */,
+			);
+			name = RNIDcardScanner;
+			productName = RNIDcardScanner;
+			productReference = B7A7A9D6236A7E8C00389397 /* libRNIDcardScanner.a */;
+			productType = "com.apple.product-type.library.static";
+		};
+		B7A7AA23236A86A700389397 /* RNIDcardScannerReources */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = B7A7AA27236A86A700389397 /* Build configuration list for PBXNativeTarget "RNIDcardScannerReources" */;
+			buildPhases = (
+				B7A7AA20236A86A700389397 /* Sources */,
+				B7A7AA21236A86A700389397 /* Frameworks */,
+				B7A7AA22236A86A700389397 /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+			);
+			name = RNIDcardScannerReources;
+			productName = RNIDcardScannerReources;
+			productReference = B7A7AA24236A86A700389397 /* RNIDcardScannerReources.bundle */;
+			productType = "com.apple.product-type.bundle";
+		};
+/* End PBXNativeTarget section */
+
+/* Begin PBXProject section */
+		B7A7A9CE236A7E8C00389397 /* Project object */ = {
+			isa = PBXProject;
+			attributes = {
+				LastUpgradeCheck = 0920;
+				ORGANIZATIONNAME = com.rainy.osource;
+				TargetAttributes = {
+					B7A7A9D5236A7E8C00389397 = {
+						CreatedOnToolsVersion = 9.2;
+						ProvisioningStyle = Automatic;
+					};
+					B7A7AA23236A86A700389397 = {
+						CreatedOnToolsVersion = 9.2;
+						ProvisioningStyle = Automatic;
+					};
+				};
+			};
+			buildConfigurationList = B7A7A9D1236A7E8C00389397 /* Build configuration list for PBXProject "RNIDcardScanner" */;
+			compatibilityVersion = "Xcode 8.0";
+			developmentRegion = en;
+			hasScannedForEncodings = 0;
+			knownRegions = (
+				en,
+			);
+			mainGroup = B7A7A9CD236A7E8C00389397;
+			productRefGroup = B7A7A9D7236A7E8C00389397 /* Products */;
+			projectDirPath = "";
+			projectRoot = "";
+			targets = (
+				B7A7A9D5236A7E8C00389397 /* RNIDcardScanner */,
+				B7A7AA23236A86A700389397 /* RNIDcardScannerReources */,
+			);
+		};
+/* End PBXProject section */
+
+/* Begin PBXResourcesBuildPhase section */
+		B7A7AA22236A86A700389397 /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				B7A7AA51236AEFC300389397 /* zocr0.lib in Resources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXResourcesBuildPhase section */
+
+/* Begin PBXSourcesBuildPhase section */
+		B7A7A9D2236A7E8C00389397 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				B7A7A9DB236A7E8C00389397 /* RCTIDcardScanner.m in Sources */,
+				B7599FC82374266C00C4B542 /* UIColor+Hex.m in Sources */,
+				B7A7AA4E236AE2DC00389397 /* RectManager.m in Sources */,
+				B7A7AA4F236AE2DC00389397 /* UIImage+Extend.m in Sources */,
+				B7A7AA3C236A999000389397 /* RCTIDCardScannerManager.m in Sources */,
+				B7A7AA4D236AE2DC00389397 /* IDInfo.m in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		B7A7AA20236A86A700389397 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXSourcesBuildPhase section */
+
+/* Begin PBXTargetDependency section */
+		B7A7AA3E236AB62200389397 /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			target = B7A7AA23236A86A700389397 /* RNIDcardScannerReources */;
+			targetProxy = B7A7AA3D236AB62200389397 /* PBXContainerItemProxy */;
+		};
+/* End PBXTargetDependency section */
+
+/* Begin XCBuildConfiguration section */
+		B7A7A9DD236A7E8C00389397 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_ANALYZER_NONNULL = YES;
+				CLANG_ANALYZER_NUMBER_OBJECT_CONVERSION = YES_AGGRESSIVE;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++14";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_WARN_BLOCK_CAPTURE_AUTORELEASING = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_COMMA = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_DOCUMENTATION_COMMENTS = YES;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INFINITE_RECURSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_NON_LITERAL_NULL_CONVERSION = YES;
+				CLANG_WARN_OBJC_LITERAL_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_RANGE_LOOP_ANALYSIS = YES;
+				CLANG_WARN_STRICT_PROTOTYPES = YES;
+				CLANG_WARN_SUSPICIOUS_MOVE = YES;
+				CLANG_WARN_UNGUARDED_AVAILABILITY = YES_AGGRESSIVE;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				CODE_SIGN_IDENTITY = "iPhone Developer";
+				COPY_PHASE_STRIP = NO;
+				DEBUG_INFORMATION_FORMAT = dwarf;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				ENABLE_TESTABILITY = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu11;
+				GCC_DYNAMIC_NO_PIC = NO;
+				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_OPTIMIZATION_LEVEL = 0;
+				GCC_PREPROCESSOR_DEFINITIONS = (
+					"DEBUG=1",
+					"$(inherited)",
+				);
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 11.2;
+				MTL_ENABLE_DEBUG_INFO = YES;
+				ONLY_ACTIVE_ARCH = YES;
+				SDKROOT = iphoneos;
+			};
+			name = Debug;
+		};
+		B7A7A9DE236A7E8C00389397 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_ANALYZER_NONNULL = YES;
+				CLANG_ANALYZER_NUMBER_OBJECT_CONVERSION = YES_AGGRESSIVE;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++14";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_WARN_BLOCK_CAPTURE_AUTORELEASING = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_COMMA = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_DOCUMENTATION_COMMENTS = YES;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INFINITE_RECURSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_NON_LITERAL_NULL_CONVERSION = YES;
+				CLANG_WARN_OBJC_LITERAL_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_RANGE_LOOP_ANALYSIS = YES;
+				CLANG_WARN_STRICT_PROTOTYPES = YES;
+				CLANG_WARN_SUSPICIOUS_MOVE = YES;
+				CLANG_WARN_UNGUARDED_AVAILABILITY = YES_AGGRESSIVE;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				CODE_SIGN_IDENTITY = "iPhone Developer";
+				COPY_PHASE_STRIP = NO;
+				DEBUG_INFORMATION_FORMAT = "dwarf-with-dsym";
+				ENABLE_NS_ASSERTIONS = NO;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu11;
+				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 11.2;
+				MTL_ENABLE_DEBUG_INFO = NO;
+				SDKROOT = iphoneos;
+				VALIDATE_PRODUCT = YES;
+			};
+			name = Release;
+		};
+		B7A7A9E0236A7E8C00389397 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				CODE_SIGN_STYLE = Automatic;
+				DEVELOPMENT_TEAM = YM5X3SPXAT;
+				HEADER_SEARCH_PATHS = "$(SRCROOT)/../../react-native/React/**";
+				IPHONEOS_DEPLOYMENT_TARGET = 9.0;
+				LIBRARY_SEARCH_PATHS = (
+					"$(inherited)",
+					"$(PROJECT_DIR)/RNIDcardScanner/libexidcard",
+				);
+				OTHER_LDFLAGS = "-ObjC";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SKIP_INSTALL = YES;
+				TARGETED_DEVICE_FAMILY = "1,2";
+			};
+			name = Debug;
+		};
+		B7A7A9E1236A7E8C00389397 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				CODE_SIGN_STYLE = Automatic;
+				DEVELOPMENT_TEAM = YM5X3SPXAT;
+				HEADER_SEARCH_PATHS = "$(SRCROOT)/../../react-native/React/**";
+				IPHONEOS_DEPLOYMENT_TARGET = 9.0;
+				LIBRARY_SEARCH_PATHS = (
+					"$(inherited)",
+					"$(PROJECT_DIR)/RNIDcardScanner/libexidcard",
+				);
+				OTHER_LDFLAGS = "-ObjC";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SKIP_INSTALL = YES;
+				TARGETED_DEVICE_FAMILY = "1,2";
+			};
+			name = Release;
+		};
+		B7A7AA28236A86A700389397 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				CODE_SIGN_IDENTITY = "Mac Developer";
+				CODE_SIGN_STYLE = Automatic;
+				COMBINE_HIDPI_IMAGES = YES;
+				DEVELOPMENT_TEAM = YM5X3SPXAT;
+				INFOPLIST_FILE = RNIDcardScannerReources/Info.plist;
+				INSTALL_PATH = "$(LOCAL_LIBRARY_DIR)/Bundles";
+				IPHONEOS_DEPLOYMENT_TARGET = 9.0;
+				MACOSX_DEPLOYMENT_TARGET = 10.12;
+				PRODUCT_BUNDLE_IDENTIFIER = com.rainy.osource.RNIDcardScannerReources;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SDKROOT = iphoneos;
+				SKIP_INSTALL = YES;
+				WRAPPER_EXTENSION = bundle;
+			};
+			name = Debug;
+		};
+		B7A7AA29236A86A700389397 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				CODE_SIGN_IDENTITY = "Mac Developer";
+				CODE_SIGN_STYLE = Automatic;
+				COMBINE_HIDPI_IMAGES = YES;
+				DEVELOPMENT_TEAM = YM5X3SPXAT;
+				INFOPLIST_FILE = RNIDcardScannerReources/Info.plist;
+				INSTALL_PATH = "$(LOCAL_LIBRARY_DIR)/Bundles";
+				IPHONEOS_DEPLOYMENT_TARGET = 9.0;
+				MACOSX_DEPLOYMENT_TARGET = 10.12;
+				PRODUCT_BUNDLE_IDENTIFIER = com.rainy.osource.RNIDcardScannerReources;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SDKROOT = iphoneos;
+				SKIP_INSTALL = YES;
+				WRAPPER_EXTENSION = bundle;
+			};
+			name = Release;
+		};
+/* End XCBuildConfiguration section */
+
+/* Begin XCConfigurationList section */
+		B7A7A9D1236A7E8C00389397 /* Build configuration list for PBXProject "RNIDcardScanner" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				B7A7A9DD236A7E8C00389397 /* Debug */,
+				B7A7A9DE236A7E8C00389397 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		B7A7A9DF236A7E8C00389397 /* Build configuration list for PBXNativeTarget "RNIDcardScanner" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				B7A7A9E0236A7E8C00389397 /* Debug */,
+				B7A7A9E1236A7E8C00389397 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		B7A7AA27236A86A700389397 /* Build configuration list for PBXNativeTarget "RNIDcardScannerReources" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				B7A7AA28236A86A700389397 /* Debug */,
+				B7A7AA29236A86A700389397 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+/* End XCConfigurationList section */
+	};
+	rootObject = B7A7A9CE236A7E8C00389397 /* Project object */;
+}
