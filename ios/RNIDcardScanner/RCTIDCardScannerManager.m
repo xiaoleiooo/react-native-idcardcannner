@@ -44,7 +44,7 @@ RCT_EXPORT_VIEW_PROPERTY(onIDScannerResult, RCTBubblingEventBlock)
     #endif
 -(UIView *)view{
     
-NSLog(@"aaa %@",NSStringFromSelector(_cmd));
+////NSLog(@"aaa %@",NSStringFromSelector(_cmd));
     [self loadEXCARDS];
     if(!self.IDcardScanner){
         self.IDcardScanner = [[RCTIDcardScanner alloc] initWithManager:self];
@@ -54,7 +54,7 @@ NSLog(@"aaa %@",NSStringFromSelector(_cmd));
     self.torchOn = NO;
     self.isInReg = NO;
     self.isCanReg = self.IDcardScanner.isAutoReg;
-NSLog(@"aaa %@   %d",NSStringFromSelector(_cmd),self.isCanReg);
+//NSLog(@"aaa %@   %d",NSStringFromSelector(_cmd),self.isCanReg);
     return self.IDcardScanner;
 }
 
@@ -74,7 +74,7 @@ NSLog(@"aaa %@   %d",NSStringFromSelector(_cmd),self.isCanReg);
 #pragma mark device
 -(AVCaptureDevice *)device{
     if (_device == nil) {
-        NSLog(@"aaa %@ nil",NSStringFromSelector(_cmd));
+        //NSLog(@"aaa %@ nil",NSStringFromSelector(_cmd));
         _device = [AVCaptureDevice defaultDeviceWithMediaType:AVMediaTypeVideo];
         
         NSError *error = nil;
@@ -121,7 +121,7 @@ NSLog(@"aaa %@   %d",NSStringFromSelector(_cmd),self.isCanReg);
 #pragma mark outPutSetting
 -(NSNumber *)outPutSetting {
     if (_outPutSetting == nil) {
-        NSLog(@"aaa %@ nil",NSStringFromSelector(_cmd));
+        //NSLog(@"aaa %@ nil",NSStringFromSelector(_cmd));
         _outPutSetting = @(kCVPixelFormatType_420YpCbCr8BiPlanarVideoRange);
     }
     
@@ -131,7 +131,7 @@ NSLog(@"aaa %@   %d",NSStringFromSelector(_cmd),self.isCanReg);
 #pragma mark metadataOutput
 -(AVCaptureMetadataOutput *)metadataOutput {
     if (_metadataOutput == nil) {
-        NSLog(@"aaa %@ nil",NSStringFromSelector(_cmd));
+        //NSLog(@"aaa %@ nil",NSStringFromSelector(_cmd));
         _metadataOutput = [[AVCaptureMetadataOutput alloc]init];
 
         [_metadataOutput setMetadataObjectsDelegate:self queue:self.queue];
@@ -143,7 +143,7 @@ NSLog(@"aaa %@   %d",NSStringFromSelector(_cmd),self.isCanReg);
 #pragma mark videoDataOutput
 -(AVCaptureVideoDataOutput *)videoDataOutput {
     if (_videoDataOutput == nil) {
-        NSLog(@"aaa %@ nil",NSStringFromSelector(_cmd));
+        //NSLog(@"aaa %@ nil",NSStringFromSelector(_cmd));
         _videoDataOutput = [[AVCaptureVideoDataOutput alloc] init];
         _videoDataOutput.alwaysDiscardsLateVideoFrames = YES;
         _videoDataOutput.videoSettings = @{(id)kCVPixelBufferPixelFormatTypeKey:self.outPutSetting};
@@ -157,7 +157,7 @@ NSLog(@"aaa %@   %d",NSStringFromSelector(_cmd),self.isCanReg);
 #pragma mark session
 -(AVCaptureSession *)session {
     if (_session == nil) {
-        NSLog(@"aaa %@ nil",NSStringFromSelector(_cmd));
+        //NSLog(@"aaa %@ nil",NSStringFromSelector(_cmd));
         _session = [[AVCaptureSession alloc] init];
         
         _session.sessionPreset = AVCaptureSessionPresetHigh;
@@ -193,7 +193,7 @@ NSLog(@"aaa %@   %d",NSStringFromSelector(_cmd),self.isCanReg);
 #pragma mark previewLayer
 -(AVCaptureVideoPreviewLayer *)previewLayer {
     if (_previewLayer == nil) {
-        NSLog(@"aaa %@ nil",NSStringFromSelector(_cmd));
+        //NSLog(@"aaa %@ nil",NSStringFromSelector(_cmd));
         _previewLayer = [[AVCaptureVideoPreviewLayer alloc] initWithSession:self.session];
     }
     
@@ -203,7 +203,7 @@ NSLog(@"aaa %@   %d",NSStringFromSelector(_cmd),self.isCanReg);
 #pragma mark queue
 -(dispatch_queue_t)queue {
     if (_queue == nil) {
-        NSLog(@"aaa %@ nil",NSStringFromSelector(_cmd));
+        //NSLog(@"aaa %@ nil",NSStringFromSelector(_cmd));
         //        _queue = dispatch_queue_create("AVCaptureSession_Start_Running_Queue", DISPATCH_QUEUE_SERIAL);
         _queue = dispatch_queue_create("IDCardScannerManagerQueue", DISPATCH_QUEUE_SERIAL);
 //        _queue = dispatch_get_global_queue(DISPATCH_QUEUE_PRIORITY_DEFAULT, 0);
@@ -225,7 +225,7 @@ NSLog(@"aaa %@   %d",NSStringFromSelector(_cmd),self.isCanReg);
             const char *thePath = [[[NSBundle mainBundle] resourcePath] UTF8String];
             int ret = EXCARDS_Init(thePath);
             if (ret != 0) {
-                NSLog(@"初始化失败：ret=%d", ret);
+                //NSLog(@"初始化失败：ret=%d", ret);
             }
         });
 //    }
@@ -237,9 +237,9 @@ RCT_EXPORT_METHOD(startSession) {
 #if TARGET_IPHONE_SIMULATOR
     return;
 #endif
-    NSLog(@"aaa %@",NSStringFromSelector(_cmd));
+    //NSLog(@"aaa %@",NSStringFromSelector(_cmd));
     if (![self.session isRunning]) {
-        NSLog(@"aaa isRunning");
+        //NSLog(@"aaa isRunning");
         dispatch_async(self.queue, ^{
             [self.session startRunning];
             [self.videoDataOutput setSampleBufferDelegate:self queue:self.queue];
@@ -253,7 +253,7 @@ RCT_EXPORT_METHOD(stopSession) {
 #if TARGET_IPHONE_SIMULATOR
     return;
 #endif
-    NSLog(@"aaa %@",NSStringFromSelector(_cmd));
+    //NSLog(@"aaa %@",NSStringFromSelector(_cmd));
     if ([self.session isRunning]) {
         dispatch_async(self.queue, ^{
             [self.session stopRunning];
@@ -267,7 +267,7 @@ RCT_EXPORT_METHOD(endSession) {
 #if TARGET_IPHONE_SIMULATOR
     return;
 #endif
-    NSLog(@"aaa %@",NSStringFromSelector(_cmd));
+    //NSLog(@"aaa %@",NSStringFromSelector(_cmd));
     if ([self.session isRunning]) {
         dispatch_async(self.queue, ^{
             [self.session stopRunning];
@@ -289,12 +289,12 @@ RCT_EXPORT_METHOD(endSession) {
 }
 
 RCT_EXPORT_METHOD(setCanReg) {
-    NSLog(@"aaa %@",NSStringFromSelector(_cmd));
+    //NSLog(@"aaa %@",NSStringFromSelector(_cmd));
     self.isCanReg = YES;
 }
 
 RCT_EXPORT_METHOD(restartScanner){
-    NSLog(@"aaa %@",NSStringFromSelector(_cmd));
+    ////NSLog(@"aaa %@",NSStringFromSelector(_cmd));
     self.isCanReg = YES;
     [self startSession];
 }
@@ -339,12 +339,7 @@ RCT_EXPORT_METHOD(restartScanner){
         CGRect faceRegion = transformedMetadataObject.bounds;
 
         if (metadataObject.type == AVMetadataObjectTypeFace) {
-            NSLog(@"是否包含头像：%d, facePathRect: %@, faceRegion: %@  isCanReg:%@" ,
-                  CGRectContainsRect(self.faceDetectionFrame,faceRegion),
-                  NSStringFromCGRect(self.faceDetectionFrame),
-                  NSStringFromCGRect(faceRegion),
-                  self.isCanReg?@"YES":@"NO"
-                  );
+            //NSLog(@"是否包含头像：%d, facePathRect: %@, faceRegion: %@  isCanReg:%@" ,CGRectContainsRect(self.faceDetectionFrame,faceRegion),NSStringFromCGRect(self.faceDetectionFrame),NSStringFromCGRect(faceRegion), self.isCanReg?@"YES":@"NO");
 
             if (CGRectContainsRect(self.faceDetectionFrame, faceRegion) && self.isCanReg) {// 只有当人脸区域的确在小框内时，才再去做捕获此时的这一帧图像
                 // 为videoDataOutput设置代理，程序就会自动调用下面的代理方法，捕获每一帧图像
@@ -377,7 +372,7 @@ RCT_EXPORT_METHOD(restartScanner){
             }
         }
     } else {
-        NSLog(@"输出格式不支持");
+        //NSLog(@"输出格式不支持");
     }
 }
 
@@ -405,9 +400,9 @@ RCT_EXPORT_METHOD(restartScanner){
         unsigned char pResult[1024];
         int ret = EXCARDS_RecoIDCardData(buffer, (int)width, (int)height, (int)rowBytes, (int)8, (char*)pResult, sizeof(pResult));
         if (ret <= 0) {
-            NSLog(@"ret=[%d]", ret);
+            //NSLog(@"ret=[%d]", ret);
         } else {
-            NSLog(@"ret=[%d]", ret);
+            //NSLog(@"ret=[%d]", ret);
             
 //            // 播放一下“拍照”的声音，模拟拍照
 //            AudioServicesPlaySystemSound(1108);
@@ -457,7 +452,7 @@ RCT_EXPORT_METHOD(restartScanner){
             }
             
             if (iDInfo) {// 读取到身份证信息，实例化出IDInfo对象后，截取身份证的有效区域，获取到图像
-                NSLog(@"\n%d\n正面\n姓名：%@\n性别：%@\n民族：%@\n住址：%@\n公民身份证号码：%@\n\n反面\n签发机关：%@\n有效期限：%@",iDInfo.type,iDInfo.name,iDInfo.gender,iDInfo.nation,iDInfo.address,iDInfo.num,iDInfo.issue,iDInfo.valid);
+                //NSLog(@"\n%d\n正面\n姓名：%@\n性别：%@\n民族：%@\n住址：%@\n公民身份证号码：%@\n\n反面\n签发机关：%@\n有效期限：%@",iDInfo.type,iDInfo.name,iDInfo.gender,iDInfo.nation,iDInfo.address,iDInfo.num,iDInfo.issue,iDInfo.valid);
 //                CGRect effectRect = [RectManager getEffectImageRect:CGSizeMake(width, height)];
 //                CGRect rect = [RectManager getGuideFrame:effectRect];
                 UIImage *image = [UIImage getImageStream:imageBuffer];
@@ -527,9 +522,9 @@ RCT_EXPORT_METHOD(IDCardRecognitFromFile:(NSString *)file resolve:(RCTPromiseRes
     unsigned char pResult[1024];
     int ret = EXCARDS_RecoIDCardFile((char*)imageBytes, (char*)pResult, sizeof(pResult));
     if (ret <= 0) {
-        NSLog(@"ret=[%d]", ret);
+        //NSLog(@"ret=[%d]", ret);
     } else {
-        NSLog(@"ret=[%d]", ret);
+        //NSLog(@"ret=[%d]", ret);
         char ctype;
         char content[256];
         int xlen;
@@ -565,7 +560,7 @@ RCT_EXPORT_METHOD(IDCardRecognitFromFile:(NSString *)file resolve:(RCTPromiseRes
             }
         }
         if (iDInfo) {// 读取到身份证信息，实例化出IDInfo对象后，截取身份证的有效区域，获取到图像
-            NSLog(@"\n%d\n正面\n姓名：%@\n性别：%@\n民族：%@\n住址：%@\n公民身份证号码：%@\n\n反面\n签发机关：%@\n有效期限：%@",iDInfo.type,iDInfo.name,iDInfo.gender,iDInfo.nation,iDInfo.address,iDInfo.num,iDInfo.issue,iDInfo.valid);
+            //NSLog(@"\n%d\n正面\n姓名：%@\n性别：%@\n民族：%@\n住址：%@\n公民身份证号码：%@\n\n反面\n签发机关：%@\n有效期限：%@",iDInfo.type,iDInfo.name,iDInfo.gender,iDInfo.nation,iDInfo.address,iDInfo.num,iDInfo.issue,iDInfo.valid);
             if (!self.IDcardScanner.onIDScannerResult) {
                 return;
             }
