@@ -52,11 +52,9 @@
     // 中间包裹线
     _IDCardScanningWindowLayer = [CAShapeLayer layer];
     _IDCardScanningWindowLayer.position = self.layer.position;
-    NSLog(@"viewPar :%f,  %ld",_IDCardScanningWindowLayer.position.x,_scannerRectTop);
-    NSLog(@"viewPar 1 frame:%@========view1 bounds:%@",NSStringFromCGRect(_IDCardScanningWindowLayer.frame),NSStringFromCGRect(_IDCardScanningWindowLayer.bounds));
     
 //    _IDCardScanningWindowLayer.position  = CGPointMake(_IDCardScanningWindowLayer.position.x, _scannerRectTop);
-    CGFloat width = iPhone5or5cor5sorSE? 240: (iPhone6or6sor7? 270: 300);//self.scannerRectWidth; //
+    CGFloat width = self.scannerRectWidth;//iPhone5or5cor5sorSE? 240: (iPhone6or6sor7? 270: 300); //
     _IDCardScanningWindowLayer.bounds = (CGRect){CGPointZero, {width, width * 1.574}};
     
     UIColor *cornerLineColor = [UIColor colorWithHexString:self.scannerRectColor];
@@ -65,12 +63,8 @@
     _IDCardScanningWindowLayer.borderColor = cornerLineColor.CGColor;//[UIColor whiteColor].CGColor;
     _IDCardScanningWindowLayer.borderWidth = self.scannerRectBorderWidth;
     
-    NSLog(@"viewPar 2 frame:%@========view1 bounds:%@",NSStringFromCGRect(_IDCardScanningWindowLayer.frame),NSStringFromCGRect(_IDCardScanningWindowLayer.bounds));
-    
     [_IDCardScanningWindowLayer setFrame:CGRectMake(_IDCardScanningWindowLayer.frame.origin.x, _scannerRectTop, _IDCardScanningWindowLayer.frame.size.width, _IDCardScanningWindowLayer.frame.size.height)];
     
-    NSLog(@"viewPar 3 frame:%@========view1 bounds:%@",NSStringFromCGRect(_IDCardScanningWindowLayer.frame),NSStringFromCGRect(_IDCardScanningWindowLayer.bounds));
-
     [self.layer addSublayer:_IDCardScanningWindowLayer];
     
     // 最里层镂空
@@ -89,11 +83,17 @@
     
     [self.layer addSublayer:fillLayer];
     
-    CGFloat facePathWidth = iPhone5or5cor5sorSE? 125: (iPhone6or6sor7? 150: 180);
-    CGFloat facePathHeight = facePathWidth * 0.812;
+//    CGFloat facePathWidth = iPhone5or5cor5sorSE? 125: (iPhone6or6sor7? 150: 180);
+//    CGFloat facePathHeight = facePathWidth * 0.812;
     CGRect rect = _IDCardScanningWindowLayer.frame;
-    self.facePathRect = (CGRect){CGRectGetMaxX(rect) - facePathWidth - 35,CGRectGetMaxY(rect) - facePathHeight - 25,facePathWidth,facePathHeight};
     
+    float headerWidth = (width * 160.5 / 270);
+    float headerLeft = (CGRectGetMinX(rect) + width * 69.5 / 270);
+    float headerTop = (CGRectGetMinY(rect) + width * 1.574 * 266 / 428);
+    float headerHeight = (headerWidth*130.5/160.5);
+    
+    
+    self.facePathRect = (CGRect){headerLeft,headerTop,headerWidth,headerHeight};
     // 提示标签
     CGPoint center = self.center;
     center.x = CGRectGetMaxX(_IDCardScanningWindowLayer.frame) + 20;
@@ -101,8 +101,8 @@
     
     // 人像
     UIImageView *headIV = [[UIImageView alloc] initWithFrame:_facePathRect];
-    headIV.image = [UIImage imageNamed:@"idcard_front_head"];
-    headIV.transform = CGAffineTransformMakeRotation(M_PI * 0.5);
+    headIV.image = [UIImage imageNamed:@"idcard_person_head"];
+//    headIV.transform = CGAffineTransformMakeRotation(M_PI * 0.5);
     headIV.contentMode = UIViewContentModeScaleAspectFill;
     [self addSubview:headIV];
 }
