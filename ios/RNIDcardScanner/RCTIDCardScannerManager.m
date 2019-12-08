@@ -453,15 +453,19 @@ RCT_EXPORT_METHOD(restartScanner){
             
             if (iDInfo) {// 读取到身份证信息，实例化出IDInfo对象后，截取身份证的有效区域，获取到图像
                 //NSLog(@"\n%d\n正面\n姓名：%@\n性别：%@\n民族：%@\n住址：%@\n公民身份证号码：%@\n\n反面\n签发机关：%@\n有效期限：%@",iDInfo.type,iDInfo.name,iDInfo.gender,iDInfo.nation,iDInfo.address,iDInfo.num,iDInfo.issue,iDInfo.valid);
-//                CGRect effectRect = [RectManager getEffectImageRect:CGSizeMake(width, height)];
+                CGRect effectRect = [RectManager getEffectImageRect:CGSizeMake(width, height)];
 //                CGRect rect = [RectManager getGuideFrame:effectRect];
+                CGRect rect = [RectManager getGuideFrame:effectRect width:_IDcardScanner.scannerRectWidth marTop:_IDcardScanner.scannerRectTop];
                 UIImage *image = [UIImage getImageStream:imageBuffer];
-//                UIImage *subImage = [UIImage getSubImage:rect inImage:image];
+                UIImage *subImage = [UIImage getSubImage:rect inImage:image];
+                
+                
+        
                 
                 NSArray *paths = NSSearchPathForDirectoriesInDomains(NSDocumentDirectory, NSUserDomainMask, YES);
                 NSString *fileName = [NSString stringWithFormat:@"%@.png",[self getNowTimeTimestamp]];
                 NSString *filePath = [[paths objectAtIndex:0] stringByAppendingPathComponent:fileName];
-                [UIImagePNGRepresentation(image) writeToFile:filePath atomically:YES];
+                [UIImagePNGRepresentation(subImage) writeToFile:filePath atomically:YES];
                 
                 
                 

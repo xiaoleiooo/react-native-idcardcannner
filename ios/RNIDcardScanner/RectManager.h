@@ -15,6 +15,7 @@
 
 + (CGRect)getEffectImageRect:(CGSize)size;
 + (CGRect)getGuideFrame:(CGRect)rect;
++ (CGRect)getGuideFrame:(CGRect)rect width:(float)width marTop:(float)marTop;
 
 + (int)docode:(unsigned char *)pbBuf len:(int)tLen;
 + (CGRect)getCorpCardRect:(int)width  height:(int)height guideRect:(CGRect)guideRect charCount:(int) charCount;

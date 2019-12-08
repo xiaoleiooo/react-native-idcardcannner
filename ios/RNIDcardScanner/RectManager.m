@@ -34,23 +34,43 @@ CGRect rects[64];
 + (CGRect)getGuideFrame:(CGRect)rect {
     float previewWidth = rect.size.height;
     float previewHeight = rect.size.width;
-    
+
     float cardh, cardw;
     float left, top;
-    
+
     cardw = previewWidth*70/100;
     //if(cardw < 720) cardw = 720;
     if(previewWidth < cardw)
         cardw = previewWidth;
-    
+
     cardh = (int)(cardw / 0.63084f);
-    
+
     left = (previewWidth-cardw)/2;
     top = (previewHeight-cardh)/2;
-    
+
     return CGRectMake(top+rect.origin.x, left+rect.origin.y, cardh, cardw);
 }
 
++(CGRect)getGuideFrame:(CGRect)rect width:(float)width marTop:(float)marTop{
+    
+    float previewWidth = rect.size.height;
+    float previewHeight = rect.size.width;
+    
+    float cardh, cardw;
+    float left, top;
+    
+    cardw = previewWidth*270 / 375;
+    //if(cardw < 720) cardw = 720;
+    if(previewWidth < cardw)
+        cardw = previewWidth;
+    
+    cardh = (int)(cardw  * 1.574);
+    
+    left = (previewWidth-cardw)/2;
+    top = (previewHeight-cardh - marTop/width*cardw - 60)/2;
+    
+    return CGRectMake(top+rect.origin.x, left+rect.origin.y, cardh, cardw);
+}
 
 + (int)docode:(unsigned char *)pbBuf len:(int)tLen {
     int hic, lwc;
