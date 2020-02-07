@@ -61,6 +61,6 @@
 - (void)setCanReg;
 
 //识别成功下，需要调用这个方法激活下次识别
--（void）restartScanner;
+- (void)restartScanner;
 
 @end

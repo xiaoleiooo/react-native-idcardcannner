@@ -379,6 +379,9 @@ RCT_EXPORT_METHOD(restartScanner){
 #pragma mark - 身份证信息识别
 - (void)IDCardRecognit:(CVImageBufferRef)imageBuffer {
     CVBufferRetain(imageBuffer);
+#if TARGET_IPHONE_SIMULATOR
+    return;
+#endif
     // Lock the image buffer
     if (CVPixelBufferLockBaseAddress(imageBuffer, 0) == kCVReturnSuccess) {
         size_t width= CVPixelBufferGetWidth(imageBuffer);// 1920
@@ -520,7 +523,9 @@ RCT_EXPORT_METHOD(restartScanner){
 
 RCT_EXPORT_METHOD(IDCardRecognitFromFile:(NSString *)file resolve:(RCTPromiseResolveBlock)resolve rejecter:(RCTPromiseRejectBlock)reject)
 {
-    
+#if TARGET_IPHONE_SIMULATOR
+    return;
+#endif
     UIImage *image = [UIImage imageNamed:@"dd.png"];
     unsigned char *imageBytes = [self pixelBRGABytesFromImage:image];
     unsigned char pResult[1024];
