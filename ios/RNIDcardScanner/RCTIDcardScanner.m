@@ -97,7 +97,7 @@
     // 提示标签
     CGPoint center = self.center;
     center.x = CGRectGetMaxX(_IDCardScanningWindowLayer.frame) + 20;
-    [self addTipLabelWithText:@"将身份证人像面置于此区域内，头像对准，扫描" center:center];
+//    [self addTipLabelWithText:@"将身份证人像面置于此区域内，头像对准，扫描" center:center];
     
     // 人像
     UIImageView *headIV = [[UIImageView alloc] initWithFrame:_facePathRect];
